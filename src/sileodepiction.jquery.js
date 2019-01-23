@@ -566,7 +566,7 @@
   });
   $(document).on('click', '.SileoDepiction-edit .SileoDepiction-DepictionTableButtonView a .SileoDepiction-link', function(e) {
     e.preventDefault();
-    let url = window.prompt('What URL do you want to use?', $(this).parent().attr('href'));
+    var url = window.prompt('What URL do you want to use?', $(this).parent().attr('href'));
     if(url) {
       $(this).parent().attr('href', url);
     }
