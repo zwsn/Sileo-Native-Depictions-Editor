@@ -52,8 +52,9 @@
             var parsed = JSON.parse(json);
             this.originalJSON = parsed;
             return json;
-          } catch {
+          } catch(error) {
             alert('Impossible to parse stringifySileoDepiction');
+            console.log(error);
           }
         }
         return false;
@@ -233,8 +234,9 @@
       });
       try {
         stringified = JSON.stringify(json);
-      } catch {
+      } catch(error) {
         alert('Impossible to stringify the value.');
+        console.log(error);
       }
     } else {
       alert('No depiction found.');
