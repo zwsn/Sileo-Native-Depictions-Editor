@@ -1,6 +1,6 @@
 # Sileo-Native-Depictions-Editor
 Easily create or edit a Sileo Native Depiction JSON file.
-## WYSIWYG.
+
 Preview available : https://www.yourepo.com/sileo-native-depictions
 
 #### With this tool, you can:
