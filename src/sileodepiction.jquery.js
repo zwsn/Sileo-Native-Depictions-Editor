@@ -51,6 +51,7 @@
           try {
             var parsed = JSON.parse(json);
             this.originalJSON = parsed;
+            this.cancel();
             return json;
           } catch(error) {
             alert('Impossible to parse stringifySileoDepiction');
@@ -62,83 +63,84 @@
     }
   };
   function loadSileoDepiction(container, json, name, author, icon) {
-    if(parseFloat(json.minVersion) > 0 && json.class == 'DepictionTabView') {
-      var content = '<div class="SileoDepiction"><div class="SileoDepiction-DepictionTabView" data-minversion="' + json.minVersion + '">';
-      content += '<div class="SileoDepiction-headerImage"';
-      if(json.headerImage) {
-        content += ' style="background-image:url(\'' + json.headerImage + '\')"';
-      }
-      content += '><div class="SileoDepiction-headerImageShadow"></div></div>';
-      if(name && name.length > 0 && author && author.length > 0 && icon && icon.length > 0) {
-        content += '<div class="SileoDepiction-headerPackage">';
-        content += '<img class="SileoDepiction-sectionImage" src="' + icon + '" />';
-        content += '<p class="SileoDepiction-name">' + name + '</p>';
-        content += '<p class="SileoDepiction-author">' + author + '</p>';
-        content += '</div>';
-      }
-      content += '<ul class="SileoDepiction-DepictionTabHeaderView">';
-      if(json.tabs && json.tabs.length > 0) {
-        $.each(json.tabs, function(i) {
-          var tab = json.tabs[i];
-          if(tab.class == 'DepictionStackView') {
-            content += addTab(i, (tab.tabname ? tab.tabname : 'Tab ' + (tab + 1)), false);
-          }
-        });
-      }
-      content += '<li class="SileoDepiction-border"></li>';
-      content += '<li class="SileoDepiction-addTab">+</li>';
-      content += '</ul>';
-      content += '<div class="SileoDepiction-DepictionTabContentView">';
-      if(json.tabs && json.tabs.length > 0) {
-        $.each(json.tabs, function(i) {
-          var tab = json.tabs[i];
-          content += '<div class="SileoDepiction-DepictionStackView">';
-          if(tab.views && tab.views.length > 0) {
-            $.each(tab.views, function(j) {
-              var view = tab.views[j];
-              if(view) {
-                if(view.class == 'DepictionHeaderView')
-                  content += addHeaderView(i, j, false, view.title);
-                else if(view.class == 'DepictionImageView')
-                  content += addImageView(i, j, view.URL, view.height, view.width, view.horizontalPadding, view.cornerRadius, view.alignment);
-                else if(view.class == 'DepictionMarkdownView')
-                  content += addMarkdownView(i, j, view.useSpacing, view.useRawFormat, view.markdown);
-                else if(view.class == 'DepictionScreenshotsView')
-                  content += addScreenshotsView(i, j, view.screenshots, view.itemCornerRadius, view.itemSize);
-                else if(view.class == 'DepictionSeparatorView')
-                  content += addSeparatorView(i, j);
-                else if(view.class == 'DepictionSpacerView')
-                  content += addSpacerView(i, j, view.spacing);
-                else if(view.class == 'DepictionSubheaderView')
-                  content += addSubheaderView(i, j, false, view.title, view.useBoldText, view.useBottomMargin);
-                else if(view.class == 'DepictionTableButtonView')
-                  content += addTableButtonView(i, j, false, view.action, view.title);
-                else if(view.class == 'DepictionTableTextView')
-                  content += addTableTextView(i, j, false, view.title, view.text);
-                else
-                  alert(view.class + ' not yet supported.');
-              }
-            });
-          }
-          content += addEditView();
-          content += '</div>';
-        });
-      }
-      content += '</div>';
-      content += '</div>';
-      content += '<div class="SileoDepiction-DepictionModalView"><div class="SileoDepiction-modal">';
-      content += '<div class="SileoDepiction-modal-header"><h3>Modal</h3><span class="SileoDepiction-closeModal">&times;</span></div>';
-      content += '<div class="SileoDepiction-modal-body"></div></div></div></div>';
-      container.html(content);
-      var h = container.find('.SileoDepiction-DepictionTabHeaderView');
-      var c = h.children().first();
-      if(c.hasClass('SileoDepiction-tabSwitch')) {
-        updateStackView(c);
-      } else {
-        updateBorder(h);
-      }
+    var content = '<div class="SileoDepiction"><div class="SileoDepiction-DepictionTabView" data-minversion="';
+    if(json && parseFloat(json.minVersion) > 0) {
+      content += json.minVersion;
     } else {
-      alert('Version not supported.');
+      content += '0.3';
+    }
+    content += '<div class="SileoDepiction-headerImage"';
+    if(json && json.headerImage) {
+      content += ' style="background-image:url(\'' + json.headerImage + '\')"';
+    }
+    content += '><div class="SileoDepiction-headerImageShadow"></div></div>';
+    if(name && name.length > 0 && author && author.length > 0 && icon && icon.length > 0) {
+      content += '<div class="SileoDepiction-headerPackage">';
+      content += '<img class="SileoDepiction-sectionImage" src="' + icon + '" />';
+      content += '<p class="SileoDepiction-name">' + name + '</p>';
+      content += '<p class="SileoDepiction-author">' + author + '</p>';
+      content += '</div>';
+    }
+    content += '<ul class="SileoDepiction-DepictionTabHeaderView">';
+    if(json && json.tabs && json.tabs.length > 0) {
+      $.each(json.tabs, function(i) {
+        var tab = json.tabs[i];
+        if(tab.class == 'DepictionStackView') {
+          content += addTab(i, (tab.tabname ? tab.tabname : 'Tab ' + (tab + 1)), false);
+        }
+      });
+    }
+    content += '<li class="SileoDepiction-border"></li>';
+    content += '<li class="SileoDepiction-addTab">+</li>';
+    content += '</ul>';
+    content += '<div class="SileoDepiction-DepictionTabContentView">';
+    if(json && json.tabs && json.tabs.length > 0) {
+      $.each(json.tabs, function(i) {
+        var tab = json.tabs[i];
+        content += '<div class="SileoDepiction-DepictionStackView">';
+        if(tab.views && tab.views.length > 0) {
+          $.each(tab.views, function(j) {
+            var view = tab.views[j];
+            if(view) {
+              if(view.class == 'DepictionHeaderView')
+                content += addHeaderView(i, j, false, view.title);
+              else if(view.class == 'DepictionImageView')
+                content += addImageView(i, j, view.URL, view.height, view.width, view.horizontalPadding, view.cornerRadius, view.alignment);
+              else if(view.class == 'DepictionMarkdownView')
+                content += addMarkdownView(i, j, view.useSpacing, view.useRawFormat, view.markdown);
+              else if(view.class == 'DepictionScreenshotsView')
+                content += addScreenshotsView(i, j, view.screenshots, view.itemCornerRadius, view.itemSize);
+              else if(view.class == 'DepictionSeparatorView')
+                content += addSeparatorView(i, j);
+              else if(view.class == 'DepictionSpacerView')
+                content += addSpacerView(i, j, view.spacing);
+              else if(view.class == 'DepictionSubheaderView')
+                content += addSubheaderView(i, j, false, view.title, view.useBoldText, view.useBottomMargin);
+              else if(view.class == 'DepictionTableButtonView')
+                content += addTableButtonView(i, j, false, view.action, view.title);
+              else if(view.class == 'DepictionTableTextView')
+                content += addTableTextView(i, j, false, view.title, view.text);
+              else
+                alert(view.class + ' not yet supported.');
+            }
+          });
+        }
+        content += addEditView();
+        content += '</div>';
+      });
+    }
+    content += '</div>';
+    content += '</div>';
+    content += '<div class="SileoDepiction-DepictionModalView"><div class="SileoDepiction-modal">';
+    content += '<div class="SileoDepiction-modal-header"><h3>Modal</h3><span class="SileoDepiction-closeModal">&times;</span></div>';
+    content += '<div class="SileoDepiction-modal-body"></div></div></div></div>';
+    container.html(content);
+    var h = container.find('.SileoDepiction-DepictionTabHeaderView');
+    var c = h.children().first();
+    if(c.hasClass('SileoDepiction-tabSwitch')) {
+      updateStackView(c);
+    } else {
+      updateBorder(h);
     }
   }
   function stringifySileoDepiction(container) {
