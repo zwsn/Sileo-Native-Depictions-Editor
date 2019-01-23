@@ -34,21 +34,21 @@
     src: url(/fonts/sf/SF-UI-Display-Bold.otf)
 }
 @keyframes Background {
-  0% {
-    background-color: transparent
-  }
-  50% {
-    background-color: red
-  }
-  100% {
-    background-color: transparent
-  }
+    0% {
+        background-color: transparent
+    }
+    50% {
+        background-color: red
+    }
+    100% {
+        background-color: transparent
+    }
 }
 .SileoDepiction {
-  z-index: 10;
-  background: #fff;
-      font-family: "San Francisco"
-  position: relative;
+    z-index: 10;
+    background: #fff;
+    font-family: "San Francisco";
+    position: relative;
     width: 281.25px;
     margin: 0 auto;
     height: 609px;
@@ -64,8 +64,8 @@
     box-sizing: content-box
 }
 .SileoDepiction [contenteditable] {
-  -webkit-user-select: text;
-  user-select: text;
+    -webkit-user-select: text;
+    user-select: text
 }
 .SileoDepiction-DepictionTabView {
     margin: 0;
@@ -84,85 +84,85 @@
     margin: 0 auto;
     padding: 0;
     height: 610px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0);
-  transition: background .2s ease, z-index .2s ease;
-  z-index: -1
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0);
+    transition: background .2s ease, z-index .2s ease;
+    z-index: -1
 }
 .SileoDepiction-DepictionModalView.SileoDepiction-visible {
-  z-index: 10;
-  background: rgba(0,0,0,.5)
+    z-index: 10;
+    background: rgba(0,0,0,.5)
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal {
-  margin: 609px 0 0;
-  background: white;
+    margin: 609px 0 0;
+    background: white;
     height: 590px;
-  border-radius: 25px;
-  overflow: hidden;
-  transition: margin .2s
+    border-radius: 25px;
+    overflow: hidden;
+    transition: margin .2s
 }
 .SileoDepiction-DepictionModalView.SileoDepiction-visible .SileoDepiction-modal {
-  margin: 20px 0 0
+    margin: 20px 0 0
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-header {
-  height: 45px;
-  padding: 20px 0 10px;
-  margin: 0 0 0 10px;
-  border-bottom: 1px solid #ddd;
-  position: relative
+    height: 45px;
+    padding: 20px 0 10px;
+    margin: 0 0 0 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal h3 {
-  text-align: left;
-  margin: 0;
-  padding: 0
+    text-align: left;
+    margin: 0;
+    padding: 0
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border-radius: 25px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 25px;
     height: 540px;
     padding: 0 10px;
     margin: 0;
     scrollbar-width: none
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body textarea {
-  width: 100%;
-  height: 350px;
-  border: 1px dashed #ddd
+    width: 100%;
+    height: 350px;
+    border: 1px dashed #ddd
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body input[type="checkbox"] {
-  float: right
+    float: right
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body input[type="text"],
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body input[type="number"],
 .SileoDepiction-DepictionModalView select {
-  width: 100%;
-  border: 1px dashed #ddd
+    width: 100%;
+    border: 1px dashed #ddd
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body hr {
-  border: 1px dashed #ddd
+    border: 1px dashed #ddd
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body button {
-  width: 100%;
-  height: 40px;
-  border-radius: 25px;
-  cursor: pointer;
-  border: 0;
-  background: #000;
-  color: #fff;
-  text-align: center
+    width: 100%;
+    height: 40px;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 0;
+    background: #000;
+    color: #fff;
+    text-align: center
 }
 .SileoDepiction-DepictionTabHeaderView::-webkit-scrollbar,
 .SileoDepiction-DepictionTabView::-webkit-scrollbar,
 .SileoDepiction-DepictionModalView .SileoDepiction-modal .SileoDepiction-modal-body::-webkit-scrollbar { 
-  display: none
+    display: none
 }
 .SileoDepiction-headerImage {
-  overflow: hidden;
+    overflow: hidden;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     height: 140px;
@@ -228,14 +228,14 @@
     scrollbar-width: none
 }
 .SileoDepiction-DepictionTabHeaderView>li.SileoDepiction-border {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100px;
-  height: 2px;
-  background:rgb(44, 177, 190);
-  content: " "
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background:rgb(44, 177, 190);
+    content: " "
 }
 .SileoDepiction-DepictionTabContentView {
     position: relative;
@@ -249,7 +249,7 @@
 }
 .SileoDepiction-addTab,
 .SileoDepiction-tabSwitch {
-  font-size: 15px;
+    font-size: 15px;
     cursor: pointer;
     display: inline-block;
     padding: 0 4px;
@@ -265,21 +265,21 @@
     border: 0
 }
 .SileoDepiction-tabSwitch:first-child {
-  padding-left: 24px
+    padding-left: 24px
 }
 .SileoDepiction-tabSwitch:nth-last-child(3) {
-  padding-right: 24px
+    padding-right: 24px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-tabSwitch:nth-last-child(3) {
-  padding-right: 4px
+    padding-right: 4px
 }
 .SileoDepiction-addTab {
-  display: none
+    display: none
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-addTab {
-  display: inline-block;
-  padding-right: 24px;
-  font-size: 24px
+    display: inline-block;
+    padding-right: 24px;
+    font-size: 24px
 }
 .SileoDepiction-tabSwitch.SileoDepiction-active {
     color: rgb(44, 177, 190)
@@ -287,86 +287,86 @@
 .SileoDepiction-tabSwitch .SileoDepiction-removeTab,
 .SileoDepiction-DepictionTabContentView .SileoDepiction-removeView,
 .SileoDepiction-DepictionTabContentView .SileoDepiction-wrenchView {
-  display: none
+    display: none
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-tabSwitch .SileoDepiction-text {
-  border: 1px dashed red;
-  min-width: 40px;
-  height: 25px;
-  line-height: 25px;
-  overflow: hidden;
-  display: block
+    border: 1px dashed red;
+    min-width: 40px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    display: block
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-closeModal,
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-tabSwitch .SileoDepiction-removeTab,
 .SileoDepiction-removeScreenshot,
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-removeView {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: -13px;
-  line-height: 13px;
-  border: 1px solid red;
-  border-radius: 15px;
-  width: 15px;
-  height: 15px;
-  background: red;
-  color: white;
-  overflow: hidden;
-  font-size: 21px;
-  text-align: center;
-  font-weight: 800
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -13px;
+    line-height: 13px;
+    border: 1px solid red;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    background: red;
+    color: white;
+    overflow: hidden;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 800
 }
 .SileoDepiction-removeScreenshot {
-  position: static;
-  float: left;
-  top: auto;
-  left: auto;
+    position: static;
+    float: left;
+    top: auto;
+    left: auto
 }
 .SileoDepiction-DepictionModalView .SileoDepiction-closeModal {
-  top: 15px;
-  left: auto;
-  right: 15px
+    top: 15px;
+    left: auto;
+    right: 15px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-wrenchView {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: -15px;
-  line-height: 15px;
-  text-align: center;
-  border: 1px solid red;
-  border-radius: 15px;
-  width: 25px;
-  height: 15px;
-  background: red;
-  color: white;
-  overflow: hidden;
-  font-size: 12px;
-  font-weight: 800
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    line-height: 15px;
+    text-align: center;
+    border: 1px solid red;
+    border-radius: 15px;
+    width: 25px;
+    height: 15px;
+    background: red;
+    color: white;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 800
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTabContentView .SileoDepiction-removeView {
-  left: -16px;
+    left: -16px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-tabSwitch:first-child .SileoDepiction-removeTab {
-  left: 7px;
+    left: 7px
 }
 .SileoDepiction-text-center {
-  text-align: center
+    text-align: center
 }
 .SileoDepiction-editSileoDepiction {
-  display: none;
-  text-align: center;
-  padding: 5px;
-  margin: 5px 0;
-  cursor: pointer;
-  font-size: 18px;
-  border: 1px dashed red
+    display: none;
+    text-align: center;
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px dashed red
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-editSileoDepiction {
-  display: block
+    display: block
 }
 .SileoDepiction-DepictionStackView {
     padding: 0 15px;
@@ -378,269 +378,269 @@
     overflow: hidden
 }
 .SileoDepiction-DepictionTableButtonView {
-  margin: 0;
-  padding: 0;
-  position: relative
+    margin: 0;
+    padding: 0;
+    position: relative
 }
 .SileoDepiction-DepictionTableButtonView>a {
-  margin: 10px 0 0;
-  height: 20px;
-  overflow: hidden;
-  display: block;
-  display: flex;
-  justify-content: space-between
+    margin: 10px 0 0;
+    height: 20px;
+    overflow: hidden;
+    display: block;
+    display: flex;
+    justify-content: space-between
 }
 .SileoDepiction-DepictionTableButtonView a {
-  text-decoration: none;
-  color: rgb(44, 177, 190)
+    text-decoration: none;
+    color: rgb(44, 177, 190)
 }
 .SileoDepiction-DepictionTableButtonView>a .SileoDepiction-text {
-  display: inline-block;
-  min-width: 50px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
+    display: inline-block;
+    min-width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 .SileoDepiction-DepictionTableButtonView>a .SileoDepiction-chevron {
-  font-weight: 400;
-  min-width: 6px;
-  font-size: 25px;
-  line-height: 17px;
-  display: inline-block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
+    font-weight: 400;
+    min-width: 6px;
+    font-size: 25px;
+    line-height: 17px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 .SileoDepiction-DepictionTableButtonView>a .SileoDepiction-link {
-  min-width: 30px;
-  text-align: right;
-  line-height: 17px;
-  display: none;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
+    min-width: 30px;
+    text-align: right;
+    line-height: 17px;
+    display: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTableButtonView {
-  border: 1px dashed red
+    border: 1px dashed red
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-blink {
-  animation: Background 2s ease infinite
+    animation: Background 2s ease infinite
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTableButtonView>a .SileoDepiction-text{
-  cursor: text
+    cursor: text
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTableButtonView>a .SileoDepiction-chevron {
-  display: none
+    display: none
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTableButtonView>a .SileoDepiction-link {
-  display: inline-block
+    display: inline-block
 }
 .SileoDepiction-DepictionSubheaderView {
-  margin: 10px 0 0;
-  padding: 0;
-  position: relative
+    margin: 10px 0 0;
+    padding: 0;
+    position: relative
 }
 .SileoDepiction-DepictionSubheaderView p {
-  font-size: 12px;
-  margin: 0;
-  height: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-  overflow: hidden;
-  width: 100%
+    font-size: 12px;
+    margin: 0;
+    height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionSubheaderView {
-  border: 1px dashed red;
-  height: 20px
+    border: 1px dashed red;
+    height: 20px
 }
 .SileoDepiction-useBoldText {
-  font-weight: 600
+    font-weight: 600
 }
 .SileoDepiction-useBottomMargin {
-  margin-bottom: 20px
+    margin-bottom: 20px
 }
 .SileoDepiction-DepictionMarkdownView {
-  position: relative
+    position: relative
 }
 .SileoDepiction-DepictionMarkdownView.SileoDepiction-useSpacing {
-  padding: 10px 0
+    padding: 10px 0
 }
 .SileoDepiction-DepictionMarkdownView h1 {
-  font-size: 18px
+    font-size: 18px
 }
 .SileoDepiction-DepictionMarkdownView h2 {
-  font-size: 16px
+    font-size: 16px
 }
 .SileoDepiction-DepictionMarkdownView h3 {
-  font-size: 14px;
-  margin: 10px 0
+    font-size: 14px;
+    margin: 10px 0
 }
 .SileoDepiction-DepictionMarkdownView h4 {
-  margin: 15px 0;
-  font-size: 12px
+    margin: 15px 0;
+    font-size: 12px
 }
 .SileoDepiction-DepictionMarkdownView p {
-  margin: 5px 0;
-  font-size: 12px;
-  padding: 0
+    margin: 5px 0;
+    font-size: 12px;
+    padding: 0
 }
 .SileoDepiction-DepictionMarkdownView ul,
 .SileoDepiction-DepictionMarkdownView ol {
-  padding: 0 0 0 20px;
-  margin: 0;
-  font-size: 13px
+    padding: 0 0 0 20px;
+    margin: 0;
+    font-size: 13px
 }
 .SileoDepiction-DepictionMarkdownView ul {
-  list-style: none;
-  position: relative
+    list-style: none;
+    position: relative
 }
 .SileoDepiction-DepictionMarkdownView ul li:before {
-  content: "·";
-  font-size: 40px;
-  line-height: 12.5px;
-  position: absolute;
-  left: 0
+    content: "·";
+    font-size: 40px;
+    line-height: 12.5px;
+    position: absolute;
+    left: 0
 }
 .SileoDepiction-DepictionTableTextView {
-  margin: 10px 0;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  position: relative
+    margin: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    position: relative
 }
 .SileoDepiction-DepictionTableTextView .SileoDepiction-title {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  color: #080808;
-  min-width: 50px;
-  height: 20px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #080808;
+    min-width: 50px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 .SileoDepiction-DepictionTableTextView .SileoDepiction-text {
-  display: inline-block;
-  text-align: right;
-  color: #777;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  float: right;
-  position: relative;
-  min-width: 50px;
-  height: 20px;
-  line-height: 20px
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap
+    display: inline-block;
+    text-align: right;
+    color: #777;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    position: relative;
+    min-width: 50px;
+    height: 20px;
+    line-height: 20px
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTableTextView .SileoDepiction-text,
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionTableTextView .SileoDepiction-title {
-  border: 1px dashed red
+    border: 1px dashed red
 }
 .SileoDepiction-DepictionHeaderView {
-  position: relative;
-  color: rgb(44, 177, 190);
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  height: 20px
+    position: relative;
+    color: rgb(44, 177, 190);
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px
 }
 .SileoDepiction-DepictionHeaderView .SileoDepiction-text {
-  display: block;
-  border: 0;
-  height: 20px;
-  line-height: 20px
+    display: block;
+    border: 0;
+    height: 20px;
+    line-height: 20px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionHeaderView .SileoDepiction-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  border: 1px dashed red
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px dashed red
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionMarkdownView {
-  border: 1px dashed red
+    border: 1px dashed red
 }
 .SileoDepiction-DepictionSeparatorView {
-  position: relative;
-  padding: 0;
-  border: .5px solid #d7d7d7;
-  width: 100%;
-  height: 0px;
-  margin: 10px 0
+    position: relative;
+    padding: 0;
+    border: .5px solid #d7d7d7;
+    width: 100%;
+    height: 0px;
+    margin: 10px 0
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionSeparatorView .SileoDepiction-removeView {
-  top: -8px;
-  line-height: 13px
+    top: -8px;
+    line-height: 13px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionSeparatorView {
-  border: .5px dashed red;
-  margin: 17px 0
+    border: .5px dashed red;
+    margin: 17px 0
 }
 .SileoDepiction-DepictionSpacerView {
-  position: relative
+    position: relative
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionSpacerView {
-  border: 1px dashed red;
-  margin: 15px 0
+    border: 1px dashed red;
+    margin: 15px 0
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionSpacerView .SileoDepiction-wrenchView,
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionSpacerView .SileoDepiction-removeView {
-  top: -5px
+    top: -5px
 }
 .SileoDepiction-DepictionScreenshotsView {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  min-height: 10px
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 10px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionScreenshotsView {
-  border: 1px dashed red
+    border: 1px dashed red
 }
 .SileoDepiction-DepictionScreenshotsView ul {
-  list-style: none;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  margin: 10px auto;
-  padding: 0;
-  display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 10px auto;
+    padding: 0;
+    display: flex;
     scrollbar-width: none
 }
 .SileoDepiction-DepictionScreenshotsView ul::-webkit-scrollbar { 
-  display: none
+    display: none
 }
 .SileoDepiction-DepictionScreenshotsView li {
-  margin: 0 5px;
-  padding: 0;
-  display: inline-block
+    margin: 0 5px;
+    padding: 0;
+    display: inline-block
 }
 .SileoDepiction-DepictionScreenshotsView li:first-child {
-  margin-left: 0
+    margin-left: 0
 }
 .SileoDepiction-DepictionScreenshotsView li:last-child {
-  margin-right: 0
+    margin-right: 0
 }
 .SileoDepiction-DepictionImageView {
-  margin: 0 -20px;
-  position: relative;
-  min-height: 10px
+    margin: 0 -20px;
+    position: relative;
+    min-height: 10px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionImageView img {
-  border: 1px dashed red;
-  min-width: 1px;
-  min-height: 1px
+    border: 1px dashed red;
+    min-width: 1px;
+    min-height: 1px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionImageView .SileoDepiction-wrenchView {
-  top: 0;
-  right: 5px
+    top: 0;
+    right: 5px
 }
 .SileoDepiction-DepictionTabView.SileoDepiction-edit .SileoDepiction-DepictionImageView .SileoDepiction-removeView {
-  top: 0;
-  line-height: 13px;
-  left: 5px
+    top: 0;
+    line-height: 13px;
+    left: 5px
 }
