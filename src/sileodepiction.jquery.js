@@ -69,7 +69,7 @@
     } else {
       content += '0.3';
     }
-    content += '<div class="SileoDepiction-headerImage"';
+    content += '"><div class="SileoDepiction-headerImage"';
     if(json && json.headerImage) {
       content += ' style="background-image:url(\'' + json.headerImage + '\')"';
     }
