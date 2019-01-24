@@ -33,3 +33,6 @@ Preview available : https://www.yourepo.com/sileo-native-depictions
 * Add a button to edit header image
 * Add a better support for mobile (I tested it on my Mac only, on Chrome, Firefox and Safari)
 * Add a way to translate strings
+
+#### Known bugs:
+* Stylesheet needs to be fully rewrite
