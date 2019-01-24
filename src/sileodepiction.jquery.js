@@ -149,7 +149,7 @@
     if(depic && depic.length > 0) {
       var json = {
         class:       'DepictionTabView',
-        headerImage: depic.find('.SileoDepiction-headerImage').css('background-image').replace(')','').replace('url(', '').replace(/\"/gi, ''),
+        headerImage: (depic.find('.SileoDepiction-headerImage').css('background-image') != 'none') ? depic.find('.SileoDepiction-headerImage').css('background-image') : '').replace(')','').replace('url(', '').replace(/\"/gi, ''),
         minVersion:  parseFloat(depic.attr('data-minversion')),
         tabs:        []
       };
